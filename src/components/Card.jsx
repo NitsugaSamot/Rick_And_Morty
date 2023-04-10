@@ -2,17 +2,25 @@ import {Link} from 'react-router-dom'
 
 export default function Card({id, name, species, gender, onClose, image, status,origin}) {
    return (
-      <div key={id}>
-          <button onClick={()=>onClose}>X</button>
-          <Link to={`/detail/${id}`}>
-             <h2>{name}</h2>
-          </Link>
+      <div className="containerCards">
+         <div className='card' key={id}>
+               <div className="headerCard">
+                     <Link className='nameTitle' to={`/detail/${id}`}>
+                        <h2 >{name}</h2>
+                     </Link>
+                     <button className='onClose' onClick={()=>onClose}>x</button>
+               </div>
+               
+               <img className='imgCharacter' src={image} alt='' />
 
-         <h2>{species}</h2>
-         <h2>{gender}</h2>
-         <h2>{status}</h2>
-         <h2>{origin}</h2>
-         <img src={image} alt='' />
+
+               <h2 className='caracteristica'>{species}</h2>
+               <h2 className='caracteristica'>{gender}</h2>
+               <h2 className='caracteristica'>{status}</h2>
+               <h2 className='caracteristica'>{origin}</h2>
+         
+         </div>
       </div>
+
    ); 
 }

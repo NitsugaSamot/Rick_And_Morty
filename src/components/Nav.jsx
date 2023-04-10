@@ -1,21 +1,51 @@
 import SearchBar from './SearchBar';
-import { Link } from 'react-router-dom';
+import { Link, useLocation,  useNavigate } from 'react-router-dom';
+import './stylesNav.css'
 
 const Nav = ({ onSearch }) => {
+    const location = useLocation();
+    const navigate = useNavigate();
 
+    const handleLogout = () => {
+      navigate('/');
+    };
+    
     return (
-        <nav>
-            <SearchBar onSearch={onSearch}/>
+      <nav>
 
-            <button>
-                <Link to='/about' >ABOUT</Link>
-            </button>
+        {location.pathname !== "/" && (
+          <>
+            
+  
+            <div className="navInterna">
 
-            <button>
-                <Link to='/home' >HOME</Link>
-            </button>
-        </nav>
-    )
-}
+          
+                  <button className='btnNav'>
+                    <Link className='link' to='/about' >About</Link>
+                  </button>
+        
+                  <button className='btnNav'>
+                    <Link className='link' to='/home' >Home</Link>
+                  </button>
+
+  
+                  <div className="searchBar">
+                      <SearchBar className='search'  onSearch={onSearch} />
+                  </div>
+
+                 
+                 
+                  <button className='btnNav' onClick={handleLogout}>
+                      Log out
+                  </button>
+
+            </div>
+
+          </>
+        )}
+      </nav>
+    );
+  };
+  
 
 export default Nav;

@@ -5,3 +5,7 @@
 .Header{
    height: 3rem;
 }
+
+body{
+   background-image: linear-gradient(-223deg,rgb(54, 153, 110) 0%, rgb(42, 165, 108)47%, rgb(79, 143, 117) 80% );
+}

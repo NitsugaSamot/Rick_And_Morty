@@ -1,0 +1,79 @@
+.container-form{
+    width: 100%;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    display: flex;
+   justify-content: center;
+   height: 100%;
+   min-height: 100%;
+
+
+  }
+
+
+  .imagenPortada{
+    width: 23rem;
+  }
+
+.formulario {
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(-223deg,rgb(15, 36, 27) 0%, rgb(5, 18, 12)47%, rgb(3, 40, 25) 80% );
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    width: 50%;
+    margin-top: 6rem;
+    height: 30%;
+    gap: 1rem;
+    color: beige;
+    /* margin: 0 auto; */
+  }
+
+
+  
+  .input {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  .input:hover {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  }
+  
+  button {
+    border: none;
+    background-color: rgb(53, 170, 35);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  button:hover {
+    background-color:  rgb(64, 180, 39);
+  }
+  
+  img {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .error{
+    background-image: linear-gradient(-223deg,rgb(202, 28, 28) 0%, rgb(245, 54, 54)47%, rgb(231, 66, 61) 80% );
+    padding: 1rem;
+    border-radius: 0.4rem;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  /* #error{
+    background-color: brown;
+    padding: 1rem;
+  } */
