@@ -1,17 +1,12 @@
 .container-form{
-    width: 100%;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr; */
-    display: flex;
+   display: flex;
    justify-content: center;
+   width: 100%;
    height: 100%;
    min-height: 100%;
-
-
   }
 
-
-  .imagenPortada{
+ .imagenPortada{
     width: 23rem;
   }
 
@@ -29,9 +24,7 @@
     /* margin: 0 auto; */
   }
 
-
-  
-  .input {
+.input {
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -72,8 +65,3 @@
     width: 60%;
     margin: 0 auto;
   }
-
-  /* #error{
-    background-color: brown;
-    padding: 1rem;
-  } */

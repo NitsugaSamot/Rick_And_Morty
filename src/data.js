@@ -75,3 +75,7 @@ export default
       image: 'https://rickandmortyapi.com/api/character/avatar/5.jpeg',
    },
 ];
+
+// git add .
+// git commit -m 'checkpoint commit'
+//     git push

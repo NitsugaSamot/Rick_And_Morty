@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
+
 const URL_BASE = 'https://be-a-rym.up.railway.app/api/character'
 const API_KEY = 'af71838ffb8f.61bab4b16bc6fb23c956'
 
@@ -24,7 +25,7 @@ const Detail = () => {
 
 
     return(
-        <div>
+        <div className='card'>
             <h2>{character?.name}</h2>
             <h2>{character?.status}</h2>
             <h2>{character?.species}</h2>

@@ -6,7 +6,7 @@ import iconPortafolio from './img/icon-portfolio.png'
 
 const Header = () => {
   return (
-    <div className="container">
+    <div className="header">
        <div className="logo">
        </div>
 
