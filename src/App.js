@@ -11,6 +11,7 @@ import { Routes, Route, useNavigate} from 'react-router-dom';
 import  Form  from './components/Form';
 import Header from './components/header-footer/Header';
 import Footer from './components/header-footer/Footer';
+import Favorites from './components/Favorites';
 
 
 const URL_BASE = 'https://be-a-rym.up.railway.app/api/character';
@@ -59,6 +60,7 @@ const login = (userData) => {
             <Route path='/home' element={ <Cards characters={characters} onClose={onClose}/> }/>
             <Route path='/about' element={<About/>} />
             <Route path='/detail/:id' element={<Detail/>} />
+            <Route path='/favorites' element={<Favorites/>} />
          </Routes>
 
          <Footer/>

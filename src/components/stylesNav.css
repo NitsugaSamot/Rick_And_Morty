@@ -10,7 +10,7 @@
     width: 100%;
     display: grid;
     height: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     background-image: linear-gradient(-223deg,rgb(15, 36, 27) 0%, rgb(5, 18, 12)47%, rgb(3, 40, 25) 80% );
 }
 .searchBar{
