@@ -3,7 +3,7 @@ import { addFavorite, deleteFavorite } from '../redux/actions';
 import{ connect }from 'react-redux'
 import {useState, useEffect} from 'react'
 
- function Card({id, name, species, gender, onClose, image, deleteFavorite, myFavorites}) {
+ function Card({id, name, species, gender, onClose, image, deleteFavorite, myFavorites, addFavorite}) {
 
    const [isFav, setIsFav] = useState(false)
 
@@ -14,7 +14,7 @@ import {useState, useEffect} from 'react'
       }
       else{
          setIsFav(true)
-         addFavorite({id,name,species,gender,image})
+         addFavorite({id,name,species,gender,image,onClose})
       }
    }
 
@@ -31,14 +31,13 @@ import {useState, useEffect} from 'react'
       <div className="containerCard">
             <div className='card' key={id}>
 
-               
-
                <div className="headerCard">
                      <Link className='nameTitle' to={`/detail/${id}`}>
                         <h2 >{name}</h2>
                      </Link>
                      <button className= 'heart' onClick={handleFavorite}>{isFav ?'❤️' :'🤍'  }</button>
-                     <button className='onClose' onClick={()=>onClose}>x</button>
+                     <button className='onClose' onClick={()=>onClose(id)}>x</button>
+                     {/* <button                     onClick={() => onClose(id)}>X</button> */}
                </div>
                
                <img className='imgCharacter' src={image} alt='' />

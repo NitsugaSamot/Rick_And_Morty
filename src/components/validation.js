@@ -1,5 +1,3 @@
-
-
 const validate = (userData) => {
     const errors = {};
 

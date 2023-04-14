@@ -17,10 +17,9 @@ export default function Cards({characters, onClose}) {
                   status={status}
                   species={species}
                   gender={gender}
-               
-                  // origin={origin.name}
+                  id={id}
                   onClose={onClose}
-                  // onClose={() => window.alert('Emulamos que se cierra la card')}
+             
                   
                />
             })

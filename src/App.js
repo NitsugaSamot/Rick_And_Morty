@@ -32,13 +32,26 @@ const login = (userData) => {
    navigate('/home')
   }
 }
+useEffect(() => {
+   !access && navigate('/')
+}, [access])
+
+const imprimeAlerta = document.createElement('P')
+imprimeAlerta.textContent = 'Personaje añadido'
 
    const onSearch = (id) => {
       axios(`${URL_BASE}/${id}?key=${API_KEY}`)
       .then(response => response.data)
       .then((data) => {
          if (data.name) {
-            setCharacters((oldChars) => [...oldChars, data]);
+            let exist = characters.find((ch)=> ch.id===data.id)
+            if(exist){
+               imprimeAlerta()
+               // alert("Ya existe");
+            }else{
+               setCharacters((oldChars) => [...oldChars, data]);
+            }
+            
          } else {
             window.alert('¡No hay personajes con este ID!');
          }
@@ -46,13 +59,20 @@ const login = (userData) => {
    }
 
    const onClose = (id) => {
-      const charactersFiltered = characters.filter(character => character.id !== Number(id))
+      
+      console.log(id)
+      const charactersFiltered = characters.filter(character => character.id !== id)
       setCharacters(charactersFiltered)
+
    }
+
+
+
 
    return (
       <div className='App'>
          <Header/>
+         
          <Nav onSearch={onSearch} />
 
          <Routes>

@@ -2,12 +2,13 @@ import SearchBar from './SearchBar';
 import { Link, useLocation,  useNavigate } from 'react-router-dom';
 import './stylesNav.css'
 
-const Nav = ({ onSearch }) => {
+const Nav = ({ onSearch}) => {
     const location = useLocation();
     const navigate = useNavigate();
 
     const handleLogout = () => {
       navigate('/');
+      
     };
     
     return (
