@@ -6,6 +6,7 @@ import {useState, useEffect} from 'react'
  function Card({id, name, species, gender, onClose, image, deleteFavorite, myFavorites, addFavorite}) {
 
    const [isFav, setIsFav] = useState(false)
+   const [currentPath, setCurrentPath] = useState(window.location.pathname)
 
    const handleFavorite = () => {
       if(isFav){
@@ -26,6 +27,10 @@ import {useState, useEffect} from 'react'
       })
    }, [myFavorites])
 
+   useEffect(() => {
+      setCurrentPath(window.location.pathname);
+   }, [window.location.pathname]);
+
    return (
 
       <div className="containerCard">
@@ -35,8 +40,13 @@ import {useState, useEffect} from 'react'
                      <Link className='nameTitle' to={`/detail/${id}`}>
                         <h2 >{name}</h2>
                      </Link>
-                     <button className= 'heart' onClick={handleFavorite}>{isFav ?'❤️' :'🤍'  }</button>
-                     <button className='onClose' onClick={()=>onClose(id)}>x</button>
+                     <button className= 'heart' onClick={handleFavorite}>{isFav ?'❤️' :'🤍'  }
+                     
+                     </button>
+                     {currentPath !== '/favorites' && (
+                        <button className='onClose' onClick={() => onClose(id)}>X</button>
+                     )}
+                     {/* <button className='onClose' onClick={()=>onClose(id)}>x</button> */}
                      {/* <button                     onClick={() => onClose(id)}>X</button> */}
                </div>
                

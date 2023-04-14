@@ -66,9 +66,6 @@ imprimeAlerta.textContent = 'Personaje añadido'
 
    }
 
-
-
-
    return (
       <div className='App'>
          <Header/>
